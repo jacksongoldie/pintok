@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+# PinTok
+npm install
+npm run server
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
