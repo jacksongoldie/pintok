@@ -1,0 +1,39 @@
+{
+  "videos": [
+    {
+      "id": 1,
+      "title": "React-Player",
+      "description": "learn about react video",
+      "category": "yoga",
+      "video": "https://www.youtube.com/watch?v=7sDY4m8KNLc",
+      "date": "",
+      "likes": 10
+    },
+    {
+      "id": 2,
+      "title": "Simple Meditation",
+      "description": "10 ten minute guided meditation",
+      "category": "meditation",
+      "video": "https://www.youtube.com/watch?v=ZToicYcHIOU",
+      "date": "",
+      "likes": 100
+    },
+    {
+      "id": 3,
+      "title": "Morning Meditation",
+      "description": "10 minute guided morning meditation ",
+      "category": "meditation",
+      "video": "https://www.youtube.com/watch?v=ENYYb5vIMkU",
+      "date": "",
+      "likes": 100
+    },
+    {
+      "title": "test",
+      "category": "pilates",
+      "description": "test",
+      "date": "test",
+      "video": "test",
+      "id": 4
+    }
+  ]
+}
