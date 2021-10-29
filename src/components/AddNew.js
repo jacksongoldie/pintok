@@ -7,14 +7,14 @@ function AddNew({ getNewVideo }){
         title: "",
         category: "",
         description: "",
-        date: "",
+        likes: 0,
         video: ""
     }
     const [formData, setFormData] = useState(blankForm)
 
     function handleOnChange(e){
         const name = e.target.name;
-        let value = e.target.value;
+        let value = e.target.value
 
         setFormData({
         ...formData,
@@ -41,7 +41,7 @@ function AddNew({ getNewVideo }){
             <label>Category: 
                 {/*default value allows for placeholder while disabled keeps it from being selected*/}
                 <select name="category" value={formData.category} onChange={handleOnChange} >
-                    <option value="" selected disabled hidden>Select...</option>
+                    <option value="" defaultValue disabled hidden>Select...</option>
                     <option value="low-impact">Low Impact</option>
                     <option value="meditation">Meditation</option>
                     <option value="pilates">Pilates</option>
@@ -61,11 +61,7 @@ function AddNew({ getNewVideo }){
                 URL:  
                 <input type="text" name="video" onChange={handleOnChange} value={formData.video}/>
             </label>
-            <label>
-                Date Added:  
-                <input type="text" name="date" onChange={handleOnChange} value={formData.date}/>
-            </label>
-                <input type="submit" name="Submit" />
+                <button type="submit" name="Submit">Add Video</button>
         </form>
     )
 }

@@ -21,7 +21,7 @@ function App() {
   }
 
   function getNewVideo(videoInfo){
-    console.log(videoInfo)
+    setVideos([...videos, videoInfo])
   }
 
   //videosToDisplay uses search and filter to send videos array to container
