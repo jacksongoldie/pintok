@@ -1,19 +1,11 @@
 {
   "videos": [
     {
-      "id": 1,
-      "title": "React-Player",
-      "description": "learn about react video",
-      "category": "yoga",
-      "video": "https://www.youtube.com/watch?v=7sDY4m8KNLc",
-      "date": "",
-      "likes": 10
-    },
-    {
       "id": 2,
       "title": "Simple Meditation",
-      "description": "10 ten minute guided meditation",
+      "notes": "10 ten minute guided meditation",
       "category": "meditation",
+      "time": "10-15min",
       "video": "https://www.youtube.com/watch?v=ZToicYcHIOU",
       "date": "",
       "likes": 100
@@ -21,99 +13,22 @@
     {
       "id": 3,
       "title": "Morning Meditation",
-      "description": "10 minute guided morning meditation ",
+      "notes": "10 minute guided morning meditation ",
       "category": "meditation",
+      "time": "10-15min",
       "video": "https://www.youtube.com/watch?v=ENYYb5vIMkU",
       "date": "",
-      "likes": 100
+      "likes": 111
     },
     {
-      "title": "test",
-      "category": "pilates",
-      "description": "test",
-      "date": "test",
-      "video": "test",
-      "id": 4
-    },
-    {
-      "title": "low impact weights",
-      "category": "low-impact",
-      "description": "test",
-      "date": "2021-10-29T17:21:01.248Z",
-      "video": "test",
-      "id": 5
-    },
-    {
-      "title": "new meditation 15 minutes",
+      "id": 4,
+      "title": "Morning Meditation",
+      "notes": "10 minute guided morning meditation ",
       "category": "meditation",
-      "description": "new video ",
-      "likes": 0,
-      "video": "video",
-      "id": 6
-    },
-    {
-      "title": "test",
-      "category": "low-impact",
-      "description": "test",
-      "likes": 0,
-      "video": "test",
-      "id": 7
-    },
-    {
-      "title": "here ",
-      "category": "other",
-      "description": "we ",
-      "likes": 0,
-      "video": "go",
-      "id": 8
-    },
-    {
-      "title": "title",
-      "category": "pilates",
-      "description": "desc",
-      "likes": 0,
-      "video": "URL",
-      "id": 9
-    },
-    {
-      "title": "test",
-      "category": "pilates",
-      "description": "test",
-      "likes": 0,
-      "video": "",
-      "id": 10
-    },
-    {
-      "title": "yoga",
-      "category": "yoga",
-      "description": "yoga",
-      "likes": 0,
-      "video": "yoga",
-      "id": 11
-    },
-    {
-      "title": "other",
-      "category": "other",
-      "description": "other",
-      "likes": 0,
-      "video": "other",
-      "id": 12
-    },
-    {
-      "title": "otheryoga",
-      "category": "yoga",
-      "description": "otheryoga",
-      "likes": 0,
-      "video": "otheryoga",
-      "id": 13
-    },
-    {
-      "title": "10 Minute Morning Yoga",
-      "category": "yoga",
-      "description": "easy yoga for morning stretching",
-      "likes": 0,
-      "video": "https://www.youtube.com/watch?v=4pKly2JojMw",
-      "id": 14
+      "time": "10-15min",
+      "video": "https://www.youtube.com/watch?v=ENYYb5vIMkU",
+      "date": "",
+      "likes": 110
     }
   ]
 }

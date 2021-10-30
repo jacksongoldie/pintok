@@ -1,15 +1,12 @@
 import Card from "./Card";
 
-function Container({ videosArray }){
+function Container({ videosArray, onDelete, onUpdate }){
     
-    const videosToDisplay = videosArray.map((video) => <Card key={video.id} video={video} />)
-
-
-
+    const videosToDisplay = videosArray.map((video) => <Card key={video.id} video={video} onDelete={onDelete} onUpdate={onUpdate} />)
 
     return(
         <div className="container-div">
-            {videosToDisplay}
+            {videosArray[0] ? videosToDisplay : "No results."}
         </div>
     )
 }

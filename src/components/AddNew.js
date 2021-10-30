@@ -6,8 +6,9 @@ function AddNew({ getNewVideo }){
     const blankForm = {
         title: "",
         category: "",
-        description: "",
+        notes: "",
         likes: 0,
+        time: "",
         video: ""
     }
     const [formData, setFormData] = useState(blankForm)
@@ -31,14 +32,16 @@ function AddNew({ getNewVideo }){
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(formData)
-        })        
-        getNewVideo(formData)
+        })
+        .then(r => r.json())
+        .then(data => getNewVideo(data))
         setFormData(blankForm)
     }
 
     return(
         <form onSubmit={handleSubmit}>
-            <label>Category: 
+            <label>
+                Category: 
                 {/*default value allows for placeholder while disabled keeps it from being selected*/}
                 <select name="category" value={formData.category} onChange={handleOnChange} >
                     <option value="" defaultValue disabled hidden>Select...</option>
@@ -54,8 +57,19 @@ function AddNew({ getNewVideo }){
                 <input type="text" name="title" onChange={handleOnChange} value={formData.title}/>
             </label>
             <label>
-                Description: 
-                <input type="text" name="description" onChange={handleOnChange} value={formData.description}/>
+                Notes: 
+                <input type="text" name="notes" onChange={handleOnChange} value={formData.notes}/>
+            </label>
+            <label>
+                Length: 
+            <select name="time" value={formData.time} onChange={handleOnChange} >
+                    <option value="" defaultValue disabled hidden>Select...</option>
+                    <option value="10-15min">10-15 minutes</option>
+                    <option value="15-20min">15-20 minutes</option>
+                    <option value="20-30min">20-30 minutes</option>
+                    <option value="30-60min">30-60 minutes</option>
+                    <option value="overhour">1 hour or longer</option>
+                </select>
             </label>
             <label>
                 URL:  

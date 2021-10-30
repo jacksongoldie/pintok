@@ -24,6 +24,23 @@ function App() {
     setVideos([...videos, videoInfo])
   }
 
+  function onDelete(deletedVideo){
+    const updatedVideos = videos.filter((video) => video !== deletedVideo)
+    setVideos(updatedVideos)
+  }
+
+  function onUpdate(updatedVideo){
+    console.log(updatedVideo)
+    const updatedVideos = videos.map((video) => {
+      if(video.id === updatedVideo.id){
+        return updatedVideo;
+      }
+      else{
+        return video;
+      }
+    })
+    setVideos(updatedVideos)
+  }
   //videosToDisplay uses search and filter to send videos array to container
   function videosToDisplay(){
     if(search === '' && selectedCategory === 'all'){
@@ -31,7 +48,7 @@ function App() {
     }
     else if(search !== '' && selectedCategory === 'all'){
       const searchedVideos = videos.filter((video) => 
-        (video.description.toLowerCase().includes(search.toLowerCase()))
+        (video.notes.toLowerCase().includes(search.toLowerCase()))
         || video.title.toLowerCase().includes(search.toLowerCase()) 
         || video.category.toLowerCase().includes(search.toLowerCase()));
       return searchedVideos;
@@ -40,7 +57,7 @@ function App() {
       const filteredVideos = videos.filter((video) => video.category === selectedCategory)
       
       const searchedAndFilteredVideos = filteredVideos.filter((video) => 
-        (video.description.toLowerCase().includes(search.toLowerCase()))
+        (video.notes.toLowerCase().includes(search.toLowerCase()))
         || video.category.toLowerCase().includes(search.toLowerCase()) 
         || video.title.toLowerCase().includes(search.toLowerCase()));
       return searchedAndFilteredVideos;
@@ -59,7 +76,7 @@ function App() {
       <NavBar />
       <Search search={search} handleOnChange={handleOnChange} />
       <Filter selectedCategory={selectedCategory} handleSelect={handleSelect} />
-      <Container videosArray={videosToDisplay()} search={search} />
+      <Container videosArray={videosToDisplay()} search={search} onDelete={onDelete} onUpdate={onUpdate} />
       <AddNew getNewVideo={getNewVideo} />
     </div>
   );
