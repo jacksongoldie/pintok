@@ -1,24 +1,14 @@
+import { Switch, Route } from 'react-router-dom';
 import { useState, useEffect } from "react";
 import Header from "./Header";
 import NavBar from "./NavBar";
-import Search from "./Search";
-import Filter from "./Filter";
-import Container from "./Container";
+import Home from './Home';
 import AddNew from "./AddNew";
+import TopTen from "./TopTen";
 
 function App() {
 
   const [videos, setVideos] = useState([]);
-  const [search, setSearch] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  function handleOnChange(e){
-      setSearch(e.target.value)
-  }
-
-  function handleSelect(e){
-    setSelectedCategory(e.target.value)
-  }
 
   function getNewVideo(videoInfo){
     setVideos([...videos, videoInfo])
@@ -30,7 +20,6 @@ function App() {
   }
 
   function onUpdate(updatedVideo){
-    console.log(updatedVideo)
     const updatedVideos = videos.map((video) => {
       if(video.id === updatedVideo.id){
         return updatedVideo;
@@ -41,28 +30,6 @@ function App() {
     })
     setVideos(updatedVideos)
   }
-  //videosToDisplay uses search and filter to send videos array to container
-  function videosToDisplay(){
-    if(search === '' && selectedCategory === 'all'){
-      return videos;
-    }
-    else if(search !== '' && selectedCategory === 'all'){
-      const searchedVideos = videos.filter((video) => 
-        (video.notes.toLowerCase().includes(search.toLowerCase()))
-        || video.title.toLowerCase().includes(search.toLowerCase()) 
-        || video.category.toLowerCase().includes(search.toLowerCase()));
-      return searchedVideos;
-    }
-    else{
-      const filteredVideos = videos.filter((video) => video.category === selectedCategory)
-      
-      const searchedAndFilteredVideos = filteredVideos.filter((video) => 
-        (video.notes.toLowerCase().includes(search.toLowerCase()))
-        || video.category.toLowerCase().includes(search.toLowerCase()) 
-        || video.title.toLowerCase().includes(search.toLowerCase()));
-      return searchedAndFilteredVideos;
-    }
-  }
 
   useEffect(() => {
     fetch(`http://localhost:3004/videos`)
@@ -71,13 +38,20 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
+    <div className='items-center justify-center'>
       <Header />
       <NavBar />
-      <Search search={search} handleOnChange={handleOnChange} />
-      <Filter selectedCategory={selectedCategory} handleSelect={handleSelect} />
-      <Container videosArray={videosToDisplay()} search={search} onDelete={onDelete} onUpdate={onUpdate} />
-      <AddNew getNewVideo={getNewVideo} />
+      <Switch>
+          <Route exact path='/'>
+            <Home videos={videos} onDelete={onDelete} onUpdate={onUpdate} />
+          </Route>
+          <Route path='/addnew'>
+            <AddNew getNewVideo={getNewVideo} videos={videos} onDelete={onDelete} onUpdate={onUpdate} />
+          </Route>
+          <Route path='/topten'>
+            <TopTen videos={videos} onUpdate={onUpdate}/>
+          </Route>
+      </Switch>
     </div>
   );
 }

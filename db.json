@@ -3,32 +3,119 @@
     {
       "id": 2,
       "title": "Simple Meditation",
-      "notes": "10 ten minute guided meditation",
+      "comments": [
+        "2",
+        "1",
+        "1",
+        "3"
+      ],
       "category": "meditation",
       "time": "10-15min",
       "video": "https://www.youtube.com/watch?v=ZToicYcHIOU",
       "date": "",
-      "likes": 100
+      "likes": 12
     },
     {
       "id": 3,
       "title": "Morning Meditation",
-      "notes": "10 minute guided morning meditation ",
+      "comments": [
+        "hello"
+      ],
       "category": "meditation",
       "time": "10-15min",
       "video": "https://www.youtube.com/watch?v=ENYYb5vIMkU",
       "date": "",
-      "likes": 111
+      "likes": 15
     },
     {
       "id": 4,
       "title": "Morning Meditation",
-      "notes": "10 minute guided morning meditation ",
+      "comments": [
+        "great for a monday morning!"
+      ],
       "category": "meditation",
       "time": "10-15min",
       "video": "https://www.youtube.com/watch?v=ENYYb5vIMkU",
       "date": "",
-      "likes": 110
+      "likes": 16
+    },
+    {
+      "title": "For Anxiety and Stress",
+      "category": "meditation",
+      "comments": [
+        "10 ten minute guided meditation"
+      ],
+      "likes": 1,
+      "time": "20-30min",
+      "video": "https://www.youtube.com/watch?v=6vO1wPAmiMQ",
+      "id": 5
+    },
+    {
+      "title": "Cardio",
+      "category": "low-impact",
+      "comments": [],
+      "likes": 2,
+      "time": "30-60min",
+      "video": "https://www.youtube.com/watch?v=3SpPraOLJl4",
+      "id": 7
+    },
+    {
+      "title": "Easy Core Yoga",
+      "category": "yoga",
+      "comments": [
+        "quick!"
+      ],
+      "likes": 0,
+      "time": "10-15min",
+      "video": "https://www.youtube.com/watch?v=8T39OBNaNzU",
+      "id": 8
+    },
+    {
+      "title": "Back and Hamstring Yoga",
+      "category": "yoga",
+      "comments": [],
+      "likes": 0,
+      "time": "20-30min",
+      "video": "https://www.youtube.com/watch?v=2xF_teT2_V0",
+      "id": 9
+    },
+    {
+      "title": "Neck and Shoulder",
+      "category": "yoga",
+      "comments": [
+        "stretches upper body"
+      ],
+      "likes": 0,
+      "time": "10-15min",
+      "video": "https://www.youtube.com/watch?v=X3-gKPNyrTA",
+      "id": 10
+    },
+    {
+      "title": "Leg and Thigh",
+      "category": "pilates",
+      "comments": [],
+      "likes": 0,
+      "time": "10-15min",
+      "video": "https://www.youtube.com/watch?v=RBiEEDnIGY0",
+      "id": 11
+    },
+    {
+      "title": "Abs, Glutes, Back",
+      "category": "pilates",
+      "comments": [],
+      "likes": 0,
+      "time": "20-30min",
+      "video": "https://www.youtube.com/watch?v=FQRoS0KsQBo",
+      "id": 14
+    },
+    {
+      "title": "Standing Balance",
+      "category": "pilates",
+      "comments": [],
+      "likes": 0,
+      "time": "10-15min",
+      "video": "https://www.youtube.com/watch?v=9wkdaqOXMwM",
+      "id": 15
     }
   ]
 }
