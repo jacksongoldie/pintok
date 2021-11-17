@@ -35,6 +35,7 @@ function App() {
     fetch(`http://localhost:3004/videos`)
     .then(r => r.json())
     .then((videos) => setVideos(videos))
+    .catch(error => window.alert('Is server connected?'))
   }, [])
 
   return (

@@ -18,7 +18,6 @@ function Comment({video, onUpdate}){
             body: JSON.stringify( {comments: [newComment, ...video.comments ] })
         })
         .then( r => r.json())
-        //set state of videos to get updated item back from fetch
         .then((video) => onUpdate(video))
         setNewComment('')
     }

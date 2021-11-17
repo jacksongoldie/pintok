@@ -2,6 +2,7 @@ import ReactPlayer from 'react-player';
 import Comment from './Comment';
 
 function Card({ video, onDelete, onUpdate, index }){
+    //should use state instead of ++video.likes ??
 
     function handleLike(){
         fetch(`http://localhost:3004/videos/${video.id}`, {
@@ -9,10 +10,9 @@ function Card({ video, onDelete, onUpdate, index }){
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify( {likes: ++video.likes, })
+            body: JSON.stringify( {likes: ++video.likes })
         })
         .then( r => r.json())
-        //set state of videos to get updated item back from fetch
         .then((video) => onUpdate(video))
     }
 
@@ -26,12 +26,9 @@ function Card({ video, onDelete, onUpdate, index }){
 }
 
     function handleCommentDelete(id, comment){
-        
-        //using filter to return all comments that weren't the same as the deleted comment, but need to find and delete index instead??
         const index = video.comments.indexOf(comment);
         const updatedComments = video.comments;
         updatedComments.splice(index, 1);
-        //const updatedComments = video.comments.filter((com) => com !== comment)
 
         fetch(`http://localhost:3004/videos/${id}`, {
             method: 'PATCH',
@@ -41,19 +38,20 @@ function Card({ video, onDelete, onUpdate, index }){
             body: JSON.stringify( {comments: updatedComments })
         })
         .then( r => r.json())
-        //set state of videos to get updated item back from fetch
         .then((video) => onUpdate(video))
     }
 
+
     const comments = video.comments.map((comment) => {
+        const key = Math.random();
     return (
-        <>
-            <li key={comment}>
-            {comment} 
-            <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold px-1 rounded mx-1' onClick={() => handleCommentDelete(video.id, comment)}>
+        <div key={key}>
+            <li>
+                {comment} 
+                <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold px-1 rounded mx-1' onClick={() => handleCommentDelete(video.id, comment)}>
                 x</button>
             </li>
-        </>
+        </div>
     )})
 
    

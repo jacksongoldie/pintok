@@ -5,7 +5,7 @@ function NavBar(){
 
     return(
         <div className='p-4'>
-            <ul class="flex">
+            <ul className="flex">
             <li className="flex-1 mr-2">
                 <NavLink
                     className={liClass}
