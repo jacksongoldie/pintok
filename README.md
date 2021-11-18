@@ -1,7 +1,7 @@
 # PinTube
 PinTube is a video collection tool allowing users to input information about a video, including it's YouTube url, to be displayed on the Homepage. The collection can be searched and filtered by category. Each video card has a like button and comment section. The ten videos with the most "likes" are displayed on the Top 10 page.
 
-![screenshot of webpage](images/screenshot.png)
+![screenshot of webpage](/home/goldi/Development/code/Mod2/pintok/public/images/screenshot.png)
 
 # Built With
 This project uses React, JSON-server, Tailwind CSS
