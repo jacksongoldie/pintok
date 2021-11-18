@@ -3,7 +3,7 @@ PinTube is a video collection tool allowing users to input information about a v
 
 ![screenshot of webpage](/home/goldi/Development/code/Mod2/pintok/public/images/screenshot.png)
 
-# Built With
+# Built With 
 This project uses React, JSON-server, Tailwind CSS
 
 # Getting Started
