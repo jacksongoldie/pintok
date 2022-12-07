@@ -18,11 +18,10 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "craco start",
+    "start": "node server.js",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject",
-    "server": "json-server --watch db.json --port 3004"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
