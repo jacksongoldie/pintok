@@ -18,7 +18,7 @@ function Card({ video, onDelete, onUpdate, index }){
 
 
     function handleDelete(){
-        fetch(`http://localhost:3004/videos/${video.id}`,{
+        fetch(`https://6390cef665ff4183111f9f23.mockapi.io/mock/videos/${video.id}`,{
             method: 'DELETE',
         })
         .then(r => r.json())
