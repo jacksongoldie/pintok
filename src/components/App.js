@@ -32,7 +32,7 @@ function App() {
   }
 
   useEffect(() => {
-    fetch(`localhost:3004/videos`)
+    fetch(`https://6390cef665ff4183111f9f23.mockapi.io/mock/videos`)
     .then(r => r.json())
     .then((videos) => setVideos(videos))
     .catch(error => window.alert('Is server connected?'))

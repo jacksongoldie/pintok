@@ -5,7 +5,7 @@ function Card({ video, onDelete, onUpdate, index }){
     //should use state instead of ++video.likes ??
 
     function handleLike(){
-        fetch(`http://localhost:3004/videos/${video.id}`, {
+        fetch(`https://6390cef665ff4183111f9f23.mockapi.io/mock/videos/${video.id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'

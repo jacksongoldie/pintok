@@ -32,7 +32,7 @@ function AddNew({ getNewVideo }){
     function handleSubmit(e){
         e.preventDefault()
 
-        fetch(`http://localhost:3004/videos`,{
+        fetch(`https://6390cef665ff4183111f9f23.mockapi.io/mock/videos`,{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
