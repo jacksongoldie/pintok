@@ -6,7 +6,7 @@ function Card({ video, onDelete, onUpdate, index }){
 
     function handleLike(){
         fetch(`https://6390cef665ff4183111f9f23.mockapi.io/mock/videos/${video.id}`, {
-            method: 'PATCH',
+            method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
             },
