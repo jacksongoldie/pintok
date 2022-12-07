@@ -1,7 +1,7 @@
 {
   "name": "pintok",
   "version": "0.1.0",
-  "homepage": "https://pintube.goldie-jackson.com",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.4.0",
